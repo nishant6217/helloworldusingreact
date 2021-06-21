@@ -1,13 +1,22 @@
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const name = 'Akash';
+  // const loading = true;
+  const isLoggedin = true ;
   return (
+    // <div> 
+    // <React.Fragment>
+      // <h1>hey  there !</h1>
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          {!isLoggedin && <p>Hello World </p>}
+          {isLoggedin && <p> Hello {name}</p>}
+          {/* {name} !! {new Date() . toDateString()} {isLoggedin ? name : 'World'} */}
         </p>
         <a
           className="App-link"
@@ -19,6 +28,8 @@ function App() {
         </a>
       </header>
     </div>
+    // </React.Fragment>
+    // </div>
   );
 }
 
